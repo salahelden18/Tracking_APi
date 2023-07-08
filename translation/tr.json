@@ -1,0 +1,13 @@
+{
+  "LabelCreated": "Evraklar Oluşturuldu",
+  "PickedUp": "Alındı",
+  "Departed": "Ayrıldı",
+  "EnteredCustoms": "Gümrüğe Girdi",
+  "DepartedCustoms": "Gümrükten Ayrıldı",
+  "SpecialEvent": "Özel Durum",
+  "Delivered": "Teslim Edildi",
+  "NotDelivered": "Teslim Edilmedi",
+  "ReturnToSender": "Gönderene İade",
+  "ReturnedToSender": "Gönderene İade Edildi",
+  "LastMile": "Son Mil"
+}
