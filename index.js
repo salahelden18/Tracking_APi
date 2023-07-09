@@ -19,7 +19,6 @@ mongoose
   .catch((e) => {
     console.log("Cound not connect to database");
     console.log(e);
-    throw new Error(`Error connecting to database: ${e.message}`);
   });
 
 // start listening to the requests
