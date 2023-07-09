@@ -43,6 +43,8 @@ const sendErrorProd = (err, res) => {
     res.status(500).json({
       status: "error",
       message: "Something went wrong",
+      //just for testing
+      errorFrom: err.message,
     });
   }
 };
