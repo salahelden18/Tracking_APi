@@ -7,7 +7,9 @@ exports.trackDhlRequest = async (trackingNumber, language) => {
 
   try {
     const response = await axios.get(
-      `${url}trackingNumber=${trackingNumber}&language=${language}`,
+      `${url}trackingNumber=${trackingNumber}&language=${
+        language === undefined ? "en" : language
+      }`,
       {
         headers: {
           "DHL-API-Key": process.env.DHL_CLIENT_ID,
