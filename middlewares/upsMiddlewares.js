@@ -35,8 +35,8 @@ exports.obtainNewUpsToken = async () => {
     };
   } catch (error) {
     throw new AppError(
-      e.response.data.response.errors[0].message,
-      e.response.status
+      error.response.data.response.errors[0].message,
+      error.response.status
     );
   }
 };
