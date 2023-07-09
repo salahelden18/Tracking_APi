@@ -21,6 +21,9 @@ exports.obtainNewUpsToken = async () => {
       },
     });
 
+    console.log("From Token Method\n\n");
+    console.log(response.data);
+
     const currentTime = new Date();
     const expiryDateTime = new Date(
       currentTime.getTime() + response.data["expires_in"] * 1000
@@ -39,6 +42,7 @@ exports.obtainNewUpsToken = async () => {
 };
 
 exports.trackUPSRequest = async (trackingNumber, token, language) => {
+  console.log("Entered The Tracking UPS");
   let locale;
 
   if (language === "en") {
@@ -55,6 +59,7 @@ exports.trackUPSRequest = async (trackingNumber, token, language) => {
     locale,
   }).toString();
 
+  console.log("Before Sending the request");
   const inquiryNumber = trackingNumber;
   try {
     const response = await axios.get(
@@ -68,6 +73,9 @@ exports.trackUPSRequest = async (trackingNumber, token, language) => {
         },
       }
     );
+
+    console.log("After Sending the request");
+    console.log(response.data);
 
     // Ups In The Production Mode Don't Send a status code indicating the error so i have to handle it the way below For Every Thing i added status code 404
     const er = response?.data?.trackResponse?.shipment[0]?.warnings;
