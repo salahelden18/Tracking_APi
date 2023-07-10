@@ -12,6 +12,7 @@ const AppError = require("./utils/appError");
 const swaggerUI = require("swagger-ui-express");
 const swaggerJsDoc = require("swagger-jsdoc");
 
+// adding somethin
 const options = {
   definition: {
     openapi: "3.0.0",
