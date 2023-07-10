@@ -53,7 +53,7 @@ exports.obtainDHLStatus = (desc) => {
     desc.includes("not delivered") ||
     desc.includes("teslim edilmedi")
   ) {
-    return ShipmentEvents.InTransit;
+    return ShipmentEvents.NotDelivered;
   }
 
   // if (desc.includes("information received")) {
@@ -70,5 +70,5 @@ exports.obtainDHLStatus = (desc) => {
   //   return ShipmentEvents.DepartedCustoms;
   // }
 
-  return ShipmentEvents.NotDelivered;
+  return ShipmentEvents.InTransit;
 };
