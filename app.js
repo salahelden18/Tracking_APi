@@ -8,7 +8,7 @@ const xss = require("xss-clean");
 const globalErrorHandler = require("./controllers/errorController");
 const AppError = require("./utils/appError");
 
-// adding swaggeraa
+// adding swagger
 // const swaggerUI = require("swagger-ui-express");
 // const swaggerJsDoc = require("swagger-jsdoc");
 
