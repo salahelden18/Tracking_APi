@@ -41,9 +41,9 @@ const AppError = require("./utils/appError");
 
 const app = express();
 
-app.use(cors());
+// app.use(cors());
 
-app.options("*", cors());
+// app.options("*", cors());
 
 // app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
