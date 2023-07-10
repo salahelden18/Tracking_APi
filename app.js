@@ -38,6 +38,10 @@ const specs = swaggerJsDoc(options);
 
 const app = express();
 
+app.use(cors());
+
+app.options("*", cors());
+
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
 // translations
