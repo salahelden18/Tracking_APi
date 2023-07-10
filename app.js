@@ -27,6 +27,9 @@ const options = {
         url: "https://zany-teal-piranha-garb.cyclic.app",
       },
       {
+        url: "https://kargomkolay.onrender.com",
+      },
+      {
         url: "http://localhost:3000",
       },
     ],
