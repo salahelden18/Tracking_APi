@@ -9,15 +9,11 @@ process.on("uncaughtException", (err) => {
 });
 
 mongoose
-  .connect(process.env.MONGODB_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGODB_URL)
   .then(() => {
     console.log("Connected");
   })
   .catch((e) => {
-    console.log("Cound not connect to database");
     console.log(e);
   });
 

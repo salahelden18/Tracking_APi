@@ -60,6 +60,7 @@ exports.trackShipment = catchAsync(async (req, res, next) => {
     res,
     language
   );
+  console.log(data.lastStatus);
 
   // 2- find if we have a record with the same tracking number and the carrier company
   let track = await Tracking.findOneAndUpdate(

@@ -1,14 +1,14 @@
 {
-	"LabelCreated": "تم تجهيز الاوراق",
-	"PickedUp": "تم استلامه",
-	"Departed": "غادر",
-	"EnteredCustoms": "دخل الجمارك",
-	"DepartedCustoms": "غادر الجمارك",
-	"SpecialEvent": "حدث خاص",
-	"Delivered": "تم التوصيل",
-	"NotDelivered": "لم يتم التسليم",
-	"ReturnToSender": "إرجاع إلى المرسل",
-	"ReturnedToSender": "تم إعادة إلى المرسل",
-	"LastMile": "آخر ميل",
-	"sss": "sss"
+  "LabelCreated": "تم تجهيز الاوراق",
+  "PickedUp": "تم استلامه",
+  "Departed": "غادر",
+  "EnteredCustoms": "دخل الجمارك",
+  "DepartedCustoms": "غادر الجمارك",
+  "SpecialEvent": "حدث خاص",
+  "Delivered": "تم التوصيل",
+  "NotDelivered": "لم يتم التسليم",
+  "ReturnToSender": "إرجاع إلى المرسل",
+  "ReturnedToSender": "تم إعادة إلى المرسل",
+  "LastMile": "آخر ميل",
+  "InTransit": "في مرحله انتقاليه"
 }

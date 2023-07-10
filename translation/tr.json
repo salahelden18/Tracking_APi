@@ -9,5 +9,6 @@
   "NotDelivered": "Teslim Edilmedi",
   "ReturnToSender": "Gönderene İade",
   "ReturnedToSender": "Gönderene İade Edildi",
-  "LastMile": "Son Mil"
+  "LastMile": "Son Mil",
+  "InTransit": "Taşıma sürecinde"
 }

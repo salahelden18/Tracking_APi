@@ -21,9 +21,6 @@ exports.obtainNewUpsToken = async () => {
       },
     });
 
-    console.log("From Token Method\n\n");
-    console.log(response.data);
-
     const currentTime = new Date();
     const expiryDateTime = new Date(
       currentTime.getTime() + response.data["expires_in"] * 1000
@@ -42,7 +39,6 @@ exports.obtainNewUpsToken = async () => {
 };
 
 exports.trackUPSRequest = async (trackingNumber, token, language) => {
-  console.log("Entered The Tracking UPS");
   let locale;
 
   if (language === "en") {
@@ -116,6 +112,6 @@ exports.obtainUpsStatus = (type) => {
       return ShipmentEvents.ReturnedToSender;
     default:
       // added later
-      return ShipmentEvents.NotDelivered;
+      return ShipmentEvents.InTransit;
   }
 };

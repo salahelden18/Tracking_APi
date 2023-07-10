@@ -10,6 +10,7 @@ const ShipmentEvents = {
   ReturnToSender: 9,
   ReturnedToSender: 10,
   LastMile: 11,
+  InTransit: 12,
 };
 
 module.exports = ShipmentEvents;

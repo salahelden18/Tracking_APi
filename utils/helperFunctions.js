@@ -6,7 +6,7 @@ exports.getTheAssociatedKeyWithTheValue = (searchValue) => {
       return currentKey;
     }
   }
-  return "NotDelivered";
+  return "InTransit";
 };
 
 exports.formatTheStatusIntoUserReadableString = (value) => {

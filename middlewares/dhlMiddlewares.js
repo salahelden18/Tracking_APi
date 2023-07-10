@@ -5,11 +5,18 @@ const ShipmentEvents = require("../utils/shippmentEvents");
 exports.trackDhlRequest = async (trackingNumber, language) => {
   const url = process.env.DHL_URL;
 
+  let lang;
+  if (language === undefined) {
+    lang = "en";
+  } else if (language === "ar" || language === "en" || language === "tr") {
+    lang = language;
+  } else {
+    lang = "en";
+  }
+
   try {
     const response = await axios.get(
-      `${url}trackingNumber=${trackingNumber}&language=${
-        language === undefined ? "en" : language
-      }`,
+      `${url}trackingNumber=${trackingNumber}&language=${lang}`,
       {
         headers: {
           "DHL-API-Key": process.env.DHL_CLIENT_ID,
@@ -46,7 +53,7 @@ exports.obtainDHLStatus = (desc) => {
     desc.includes("not delivered") ||
     desc.includes("teslim edilmedi")
   ) {
-    return ShipmentEvents.NotDelivered;
+    return ShipmentEvents.InTransit;
   }
 
   // if (desc.includes("information received")) {

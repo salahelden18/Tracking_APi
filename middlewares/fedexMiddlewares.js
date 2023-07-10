@@ -20,6 +20,9 @@ exports.obtainNewFedExToken = async () => {
       },
     });
 
+    console.log("after Sending the response");
+    console.log(response);
+
     const currentTime = new Date();
     const expiryDateTime = new Date(
       currentTime.getTime() + response.data["expires_in"] * 1000
@@ -127,7 +130,7 @@ exports.obtainFedExStatus = (code) => {
     case "RS":
       return ShipmentEvents.ReturnedToSender;
     default:
-      return ShipmentEvents.NotDelivered;
+      return ShipmentEvents.InTransit;
   }
 };
 

@@ -17,24 +17,22 @@ function formatData(carrierCompany, data, res) {
     case "UPS":
       return formatUPSData(data, res);
     case "CARGOMINI":
-      return formatCargoMiniData(data);
+      return formatCargoMiniData(data, res);
     default:
       return [];
   }
 }
 
-function formatCargoMiniData(data) {
+function formatCargoMiniData(data, res) {
   const events = [...data.events].reverse();
   const lastStatus = events[0].event;
 
   const activities = events.map((el) => {
-    const status = formatTheStatusIntoUserReadableString(
-      getTheAssociatedKeyWithTheValue(el.event)
-    );
+    const status = getTheAssociatedKeyWithTheValue(el.event);
 
     return {
       timestamp: el.date,
-      status,
+      status: res.__(status),
       description: el.description,
     };
   });
