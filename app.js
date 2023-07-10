@@ -9,35 +9,35 @@ const globalErrorHandler = require("./controllers/errorController");
 const AppError = require("./utils/appError");
 
 // adding swagger
-// const swaggerUI = require("swagger-ui-express");
-// const swaggerJsDoc = require("swagger-jsdoc");
+const swaggerUI = require("swagger-ui-express");
+const swaggerJsDoc = require("swagger-jsdoc");
 
 // adding something
-// const options = {
-//   definition: {
-//     openapi: "3.0.0",
-//     info: {
-//       title: "KargomKolay Tracking API",
-//       version: "1.0.0",
-//       description:
-//         "a tracking api for tracking international shippments from DHL, FedEx, CargoMini, Ups",
-//     },
-//     servers: [
-//       {
-//         url: "https://zany-teal-piranha-garb.cyclic.app",
-//       },
-//       {
-//         url: "https://kargomkolay.onrender.com",
-//       },
-//       {
-//         url: "http://localhost:3000",
-//       },
-//     ],
-//   },
-//   apis: ["./routes/*.js"],
-// };
+const options = {
+  definition: {
+    openapi: "3.0.0",
+    info: {
+      title: "KargomKolay Tracking API",
+      version: "1.0.0",
+      description:
+        "a tracking api for tracking international shippments from DHL, FedEx, CargoMini, Ups",
+    },
+    servers: [
+      {
+        url: "https://zany-teal-piranha-garb.cyclic.app",
+      },
+      {
+        url: "https://kargomkolay.onrender.com",
+      },
+      {
+        url: "http://localhost:3000",
+      },
+    ],
+  },
+  apis: ["./routes/*.js"],
+};
 
-// const specs = swaggerJsDoc(options);
+const specs = swaggerJsDoc(options);
 
 const app = express();
 
@@ -45,7 +45,7 @@ const app = express();
 
 // app.options("*", cors());
 
-// app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
 // translations
 const path = require("path");
