@@ -45,7 +45,7 @@ app.use(cors());
 
 app.options("*", cors());
 
-app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
+// app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
 // translations
 const path = require("path");
