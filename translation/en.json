@@ -10,5 +10,18 @@
   "ReturnToSender": "Return To Sender",
   "ReturnedToSender": "Returned To Sender",
   "LastMile": "Last Mile",
-  "InTransit": "In Transit"
+  "InTransit": "In Transit",
+
+  "requiredFieldsError": "trade type, country code, package type and package properties is required",
+  "validCurrencyError": "Please Enter a valid currency",
+  "currencySupportError": "Only USD, EUR, TRY and GBP are supported",
+  "packageError": "Please Enter your package to be calculated",
+  "weightError": "Weight is required and should be a number",
+  "weightLengthEtcError": "Weight, height, width, and length are required and should be numbers",
+  "typeError": "Please Enter a valid type, available documents and parcels",
+  "countryCodeError": "Entered Country Code Is Not Available",
+  "generalError": "something went wrong",
+  "typeRequiredError": "type is required",
+  "success": "success",
+  "fail": "fail"
 }

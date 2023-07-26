@@ -10,5 +10,18 @@
   "ReturnToSender": "Gönderene İade",
   "ReturnedToSender": "Gönderene İade Edildi",
   "LastMile": "Son Mil",
-  "InTransit": "Taşıma sürecinde"
+  "InTransit": "Taşıma sürecinde",
+  "requiredFieldsError": "Ticaret türü, ülke kodu, paket tipi ve paket özellikleri gereklidir",
+  "validCurrencyError": "Lütfen geçerli bir para birimi girin",
+  "currencySupportError": "Sadece USD, EUR, TRY ve GBP desteklenmektedir",
+  "packageError": "Lütfen hesaplanması için paketinizi girin",
+  "weightError": "Ağırlık gereklidir ve bir sayı olmalıdır",
+  "weightLengthEtcError": "Ağırlık, yükseklik, genişlik ve uzunluk gereklidir ve sayılar olmalıdır",
+  "typeError": "Lütfen geçerli bir tür girin, belgeler ve paketler geçerlidir",
+  "countryCodeError": "Girilen ülke kodu mevcut değil",
+  "generalError": "Bir hata oluştu",
+  "typeRequiredError": "type gereklidir",
+
+  "success": "başarlı",
+  "fail": "başarsız"
 }

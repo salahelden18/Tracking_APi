@@ -10,5 +10,19 @@
   "ReturnToSender": "إرجاع إلى المرسل",
   "ReturnedToSender": "تم إعادة إلى المرسل",
   "LastMile": "آخر ميل",
-  "InTransit": "في مرحله انتقاليه"
+  "InTransit": "في مرحله انتقاليه",
+
+  "requiredFieldsError": "نوع التجارة ورمز البلد و نوع الطرد وخصائص الحزمة مطلوبة",
+  "validCurrencyError": "الرجاء إدخال عملة صالحة",
+  "currencySupportError": "يتم دعم USD, EUR, TRY, GBP فقط",
+  "packageError": "الرجاء إدخال حزمتك ليتم احتسابها",
+  "weightError": "الوزن مطلوب ويجب أن يكون رقمًا",
+  "weightLengthEtcError": "الوزن والارتفاع والعرض والطول مطلوبة ويجب أن تكون أرقام",
+  "typeError": "يرجي ادخال نوع صحيح وثائق و طرود صالحين",
+  "countryCodeError": "رمز البلد المُدخل غير متوفر",
+  "generalError": "حدث خطأ ما",
+  "typeRequiredError": "يجب ادخال النوع",
+
+  "success": "نجح",
+  "fail": "فشل"
 }

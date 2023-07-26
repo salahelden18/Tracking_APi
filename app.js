@@ -4,9 +4,11 @@ const rateLimit = require("express-rate-limit");
 const helmet = require("helmet");
 const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
+const cors = require("cors");
 
 const globalErrorHandler = require("./controllers/errorController");
 const AppError = require("./utils/appError");
+const currencySchedule = require("./utils/currencySchedule");
 
 // adding swagger
 const swaggerUI = require("swagger-ui-express");
@@ -23,9 +25,9 @@ const options = {
         "a tracking api for tracking international shippments from DHL, FedEx, CargoMini, Ups",
     },
     servers: [
-      {
-        url: "https://zany-teal-piranha-garb.cyclic.app",
-      },
+      // {
+      //   url: "https://zany-teal-piranha-garb.cyclic.app",
+      // },
       {
         url: "https://kargomkolay.onrender.com",
       },
@@ -41,9 +43,11 @@ const specs = swaggerJsDoc(options);
 
 const app = express();
 
-// app.use(cors());
+currencySchedule();
 
-// app.options("*", cors());
+app.use(cors());
+
+app.options("*", cors());
 
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
@@ -60,7 +64,8 @@ const i18n = I18n({
 app.use(i18n.init);
 
 // routes import
-const trackingController = require("./routes/trackingRoute");
+const trackingRoute = require("./routes/trackingRoute");
+const cargoCalcRoute = require("./routes/cargoCalcRoute");
 
 // middlewares
 // Security HTTP headers
@@ -86,7 +91,8 @@ app.use(mongoSanitize());
 app.use(xss());
 
 // routes middleware
-app.use("/api/v1/track", trackingController);
+app.use("/api/v1/track", trackingRoute);
+app.use("/api/v1/cargoCalc", cargoCalcRoute);
 
 // handling unhandled routes
 app.all("*", (req, res, next) => {
