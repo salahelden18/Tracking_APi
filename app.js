@@ -43,6 +43,8 @@ const specs = swaggerJsDoc(options);
 
 const app = express();
 
+app.set("trust proxy", true);
+
 currencySchedule();
 
 app.use(cors());
