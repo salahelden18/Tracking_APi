@@ -35,11 +35,6 @@ exports.calcPrice = catchAsync(async (req, res, next) => {
 
     const prices = response.data?.data?.spotPrices;
 
-    // getting the lowest price
-    const lowestPriceShippingOption = prices?.sort(
-      (a, b) => a.price - b.price
-    )[0];
-
     // check if the avgShipmentDays = 0 so it is not defined
     // getting the lowest duration
     let lowestShipmentDaysOption;
@@ -48,6 +43,11 @@ exports.calcPrice = catchAsync(async (req, res, next) => {
         (a, b) => a.avgShipmentDay - b.avgShipmentDay
       )[0];
     }
+
+    // getting the lowest price
+    const lowestPriceShippingOption = prices?.sort(
+      (a, b) => a.price - b.price
+    )[0];
 
     // adding lowest price before the conversion
     req.lowestPrice = lowestPriceShippingOption.price;
